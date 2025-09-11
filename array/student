@@ -1,0 +1,36 @@
+<?php
+$students = [
+    [
+        'name' => ' Edricka',
+        'score' => '100',
+    ],
+    [
+        'name' => 'Mae',
+        'score' => '98',
+    ],
+    [
+        'name' => 'Aicka',
+        'score' => '90',
+    ]
+];
+
+$gradeEquivalent = function($score) {
+    if ($score >= 98) return 1.00;
+    elseif ($score >= 94) return 1.25;
+    elseif ($score >= 90) return 1.50;
+    elseif ($score >= 88) return 1.75;
+    elseif ($score >= 85) return 2.00;
+    elseif ($score >= 83) return 2.25;
+    elseif ($score >= 80) return 2.50;
+    elseif ($score >= 78) return 2.75;
+    elseif ($score >= 75) return 3.00;
+    elseif ($score >= 70) return 3.25;
+    elseif ($score >= 0) return 5.00;
+    return 'Incomplete';
+};
+
+foreach ($students as $student) {
+    $equiv = $gradeEquivalent($student['score']);
+    echo "Name: {$student['name']}; Equivalent: {$equiv}\n";
+}
+?>

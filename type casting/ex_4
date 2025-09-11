@@ -1,0 +1,5 @@
+<?php
+$a    = 'car'; // $a is a string
+$a[1] = 'C';   // $a is still a string
+echo $a;       // bar
+?>

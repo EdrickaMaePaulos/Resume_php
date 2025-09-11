@@ -1,0 +1,10 @@
+<?php
+$foo = 10;          
+$bar = 10;
+$bar = (bool) $foo; 
+$bar = (bool) $bar;
+
+
+
+var_dump($bar);
+?>
